@@ -91,7 +91,7 @@ test("isValidDateString: invalid string", () => {
   });
 
   // Test for generateFlightId 
-
+/*
   // (1) Test uppercase
   test("generateFlightId: is uppercase", () => {
     expect(generateFlightId("Qantas").substring(0, 2)).toBe("QA");
@@ -129,6 +129,39 @@ test("isValidDateString: invalid string", () => {
     test("single non-whitespace char (even with spaces)", () => {
       expect(generateFlightId("A")).toBeUndefined();
       expect(generateFlightId(" A ")).toBeUndefined();
+    });
+  });
+});
+*/
+describe("generateFlightId", () => {
+  test("prefix letters: first two chars equal first two letters of airline", () => {
+    const id = generateFlightId("Qantas");
+    expect(typeof id).toBe("string");
+    expect(id.slice(0, 2)).toBe("QA");
+    console.log(`prefix letters test passed with ID: ${id}`);
+  });
+
+  test("uppercase: prefix is uppercase regardless of input case", () => {
+    const id = generateFlightId("emirates");
+    expect(id.slice(0, 2)).toBe("EM");
+    console.log(`uppercase test passed with ID: ${id}`);
+  });
+
+  describe("invalid input: empty or < 2 non-whitespace chars returns undefined", () => {
+    test("empty string", () => {
+      expect(generateFlightId("")).toBeUndefined();
+      console.log("invalid input (empty string) test passed");
+    });
+
+    test("whitespace only", () => {
+      expect(generateFlightId("   \n")).toBeUndefined();
+      console.log("invalid input (whitespace) test passed");
+    });
+
+    test("single non-whitespace char (even with spaces)", () => {
+      expect(generateFlightId("A")).toBeUndefined();
+      expect(generateFlightId(" A ")).toBeUndefined();
+      console.log("invalid input (single char) test passed");
     });
   });
 });
