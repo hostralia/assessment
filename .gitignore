@@ -153,3 +153,7 @@ dist
 # ignore /practical folder
 # use : git rm --cached practical -r
 /practical  
+
+# ignore jest.config_old.mjs
+jest.config_old.mjs
+# use : git rm --cached jest.config_old.mjs
