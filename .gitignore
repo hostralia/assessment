@@ -132,3 +132,12 @@ dist
 # docs 
 README.md
 
+# as README.md still pushed to remote repo then I have to 
+# Stop tracking README.md (but keep it in your local folder)
+# git rm --cached README.md
+
+# Commit the change
+#git commit -m "Stop tracking README.md and add it to .gitignore"
+
+# then Push to remote repository
+#git push
