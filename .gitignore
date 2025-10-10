@@ -1,3 +1,5 @@
+# .gitignored rules for a Node.js project
+
 # Logs
 logs
 *.log
