@@ -1,5 +1,8 @@
 name: Main CI
-
+# Sorry I did task 3 before task 2 and I did realise later that I was supposed to do task 2 first.
+# so there is why firstci2.yml is used instead of firstci.yml
+# and also find Task 3 is resovling correctly here 
+# i will run again task 2 with firstci2.yml
 on: push
 
 jobs:
