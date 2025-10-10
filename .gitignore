@@ -143,7 +143,7 @@ README.md
 #git push
 # to make it trackable again:
 # uncomment README.md in .gitignore
-# git add README.md
+# git add README.md -f
 # git commit -m "Start tracking README.md again"
 # git push
 # End of https://www.toptal.com/developers/gitignore/api/node
