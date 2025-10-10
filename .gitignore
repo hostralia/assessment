@@ -148,3 +148,6 @@ README.md
 # git push
 # End of https://www.toptal.com/developers/gitignore/api/node
 
+# ignore /practical folder
+# use : git rm --cached practical -r
+/practical  
