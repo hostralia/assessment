@@ -155,4 +155,3 @@ export function generateFlightId(airline) {
 
     return trimmed.substring(0, 2).toUpperCase() + digits.join('');
 }
-
