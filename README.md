@@ -10,7 +10,12 @@ The project emphasizes understanding the full lifecycle of Continuous Integratio
 
 This assessment consolidates key concepts, including:
 •	Effective use of Git and GitHub for version control and collaboration
+
 •	Integration of static analysis tools to identify and fix code quality issues
+
 •	Implementation of unit testing using Jest to ensure code reliability
+
 •	Configuration and extension of a Continuous Integration and Continuous Deployment pipeline to automate builds, tests, and deployment processes
+
 •	Building and deploying Docker images through GitHub Actions to Docker Hub
+
