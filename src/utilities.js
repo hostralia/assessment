@@ -113,6 +113,18 @@ export function isValidDateString(date) {
  * @param {string} airline the airline running the flight
  * @returns a 5 character alpha-numeric string representing the flight ID
  */
+
+
+// generateFlightId(airline) is in error 
+/*
+
+In this generateFlightId function:
+
+Input validation logic — Make sure it checks for at least 2 non-whitespace characters before generating an ID.
+Whitespace trimming — Ensure you're trimming the input before checking its length.
+Return early — If the input is invalid, return undefined before doing anything else.
+
+*
 export function generateFlightId(airline) {
     if (airline.trim() === "") {
         return undefined;
@@ -125,4 +137,21 @@ export function generateFlightId(airline) {
         digits[i] = Math.round(Math.random() * 9);
     }
     return airline.substring(0, 2).toUpperCase().concat(digits[0].toString(), digits[1].toString(), digits[2].toString());
+}
+*/
+
+export function generateFlightId(airline) {
+    const trimmed = airline.trim();
+
+    // Check for at least 2 non-whitespace characters
+    if (trimmed.length < 2) {
+        return undefined;
+    }
+
+    let digits = [];
+    for (let i = 0; i < 3; i++) {
+        digits[i] = Math.floor(Math.random() * 10); // Slightly better than Math.round
+    }
+
+    return trimmed.substring(0, 2).toUpperCase() + digits.join('');
 }

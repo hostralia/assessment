@@ -90,19 +90,78 @@ test("isValidDateString: invalid string", () => {
     expect(isValidDateString("12/12/2012")).toBe(true);
   });
 
-  ///// PUT YOUR TESTS FOR generateFlightId HERE /////
-
-  // Test uppercase
+  // Test for generateFlightId 
+/*
+  // (1) Test uppercase
   test("generateFlightId: is uppercase", () => {
     expect(generateFlightId("Qantas").substring(0, 2)).toBe("QA");
   });
 
-  // Test for blank string
+  // (2) Test for blank string
   test("generateFlightId: blank string", () => {
     expect(generateFlightId("")).toBe(undefined);
   });
 
-  // Test for string of whitespace
+  // (3)Test for string of whitespace
   test("generateFlightId: whitespace string", () => {
     expect(generateFlightId("   \n")).toBe(undefined);
   });
+
+  describe("generateFlightId", () => {
+  test("prefix letters: first two chars equal first two letters of airline", () => {
+    const id = generateFlightId("Qantas");
+    expect(typeof id).toBe("string");
+    expect(id.slice(0, 2)).toBe("QA");
+  });
+
+  test("uppercase: prefix is uppercase regardless of input case", () => {
+    const id = generateFlightId("emirates");
+    expect(id.slice(0, 2)).toBe("EM"); // 'em' → 'EM'
+  });
+
+  describe("invalid input: empty or < 2 non-whitespace chars returns undefined", () => {
+    test("empty string", () => {
+      expect(generateFlightId("")).toBeUndefined();
+    });
+    test("whitespace only", () => {
+      expect(generateFlightId("   ")).toBeUndefined();
+    });
+    test("single non-whitespace char (even with spaces)", () => {
+      expect(generateFlightId("A")).toBeUndefined();
+      expect(generateFlightId(" A ")).toBeUndefined();
+    });
+  });
+});
+*/
+describe("generateFlightId", () => {
+  test("prefix letters: first two chars equal first two letters of airline", () => {
+    const id = generateFlightId("Qantas");
+    expect(typeof id).toBe("string");
+    expect(id.slice(0, 2)).toBe("QA");
+    console.log(`prefix letters test passed with ID: ${id}`);
+  });
+
+  test("uppercase: prefix is uppercase regardless of input case", () => {
+    const id = generateFlightId("emirates");
+    expect(id.slice(0, 2)).toBe("EM");
+    console.log(`uppercase test passed with ID: ${id}`);
+  });
+
+  describe("invalid input: empty or < 2 non-whitespace chars returns undefined", () => {
+    test("empty string", () => {
+      expect(generateFlightId("")).toBeUndefined();
+      console.log("invalid input (empty string) test passed");
+    });
+
+    test("whitespace only", () => {
+      expect(generateFlightId("   \n")).toBeUndefined();
+      console.log("invalid input (whitespace) test passed");
+    });
+
+    test("single non-whitespace char (even with spaces)", () => {
+      expect(generateFlightId("A")).toBeUndefined();
+      expect(generateFlightId(" A ")).toBeUndefined();
+      console.log("invalid input (single char) test passed");
+    });
+  });
+});

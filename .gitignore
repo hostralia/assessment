@@ -132,7 +132,7 @@ dist
 .pnp.*
 
 # docs 
-README.md
+#README.md
 
 # as README.md still pushed to remote repo then I have to 
 # Stop tracking README.md (but keep it in your local folder)

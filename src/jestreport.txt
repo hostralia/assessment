@@ -1,0 +1,70 @@
+
+> pracproject@1.0.0 test
+> node --experimental-vm-modules node_modules/jest/bin/jest.js
+
+(node:86600) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS practical/utilities1.test.js
+  ΓùÅ Console
+
+    console.log
+      Γ£à prefix letters test passed with ID: QA714
+
+      at Object.<anonymous> (practical/utilities1.test.js:10:13)
+
+    console.log
+      Γ£à uppercase test passed with ID: EM276
+
+      at Object.<anonymous> (practical/utilities1.test.js:16:13)
+
+    console.log
+      Γ£à invalid input (empty string) test passed
+
+      at Object.<anonymous> (practical/utilities1.test.js:22:15)
+
+    console.log
+      Γ£à invalid input (whitespace) test passed
+
+      at Object.<anonymous> (practical/utilities1.test.js:27:15)
+
+    console.log
+      Γ£à invalid input (single char) test passed
+
+      at Object.<anonymous> (practical/utilities1.test.js:33:15)
+
+PASS practical/utilities.test.js
+PASS tests/utilities.test.js
+  ΓùÅ Console
+
+    console.log
+      prefix letters test passed with ID: QA590
+
+      at Object.<anonymous> (tests/utilities.test.js:141:13)
+
+    console.log
+      uppercase test passed with ID: EM905
+
+      at Object.<anonymous> (tests/utilities.test.js:147:13)
+
+    console.log
+      invalid input (empty string) test passed
+
+      at Object.<anonymous> (tests/utilities.test.js:153:15)
+
+    console.log
+      invalid input (whitespace) test passed
+
+      at Object.<anonymous> (tests/utilities.test.js:158:15)
+
+    console.log
+      invalid input (single char) test passed
+
+      at Object.<anonymous> (tests/utilities.test.js:164:15)
+
+PASS tests/flightScheduleDisplay.test.js
+
+Test Suites: 4 passed, 4 total
+Tests:       54 passed, 54 total
+Snapshots:   0 total
+Time:        0.711 s, estimated 1 s
+Ran all test suites.
