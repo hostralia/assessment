@@ -102,7 +102,7 @@ test("isValidDateString: invalid string", () => {
     expect(generateFlightId("")).toBe(undefined);
   });
 
-  // (3) Test for string of whitespace
+  // (3)Test for string of whitespace
   test("generateFlightId: whitespace string", () => {
     expect(generateFlightId("   \n")).toBe(undefined);
   });
