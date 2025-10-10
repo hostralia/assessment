@@ -1,0 +1,13 @@
+
+C:\assessment\src\index.js
+   41:32  error  'flightId' is assigned to itself                                                                                       no-self-assign
+   52:36  error  This branch can never execute. Its condition is a duplicate or covered by previous conditions in the if-else-if chain  no-dupe-else-if
+  137:5   error  The update clause in this loop moves the variable in the wrong direction                                               for-direction
+  148:5   error  Empty block statement                                                                                                  no-empty
+  155:5   error  Unreachable code                                                                                                       no-unreachable
+
+C:\assessment\src\utilities.js
+  90:11  error  'dayString' is assigned a value but never used  no-unused-vars
+
+✖ 6 problems (6 errors, 0 warnings)
+
