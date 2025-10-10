@@ -1,5 +1,6 @@
 "# assessment" 
 This is assessment project for TAFE.
-Can be used by studnets
+Can be used by students 
+
 thanks
 
