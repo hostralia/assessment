@@ -38,7 +38,9 @@ do {
                 case 0: {
                     let flightId = "";
                     let flightIndex = -1;
-                    flightId = flightId;
+                    // self-assign -  Remove the self-assignment or replace it with the intended normalization (e.g., uppercase).
+                    flightId = String(flightId).toUpperCase();  // line 43 fixed
+                    // flightId = flightId;
                     do {
                         flightId = readlineSync.question(wrapString("Enter the id of the flight to change the date for: "));
                         for (let i = 0; i < flights.length; i++) {
@@ -47,9 +49,11 @@ do {
                                 break;
                             }
                         }
+                        // duplocate else-if condition removed
+
                         if (flightIndex < 0) {
                             logWrapped(`ERROR: Flight ID ${flightId} not found. Please enter the ID of a flight already tracked by this system.`);
-                        } else if (flightIndex < 0);
+                        } ; //==> removed: else if (flightIndex < 0);
                     } while (flightIndex < 0);
 
                     logWrapped(`The current departure date for ${flights[flightIndex].id} is ${flights[flightIndex].date}`);
@@ -126,6 +130,7 @@ function enterFlightDate() {
  * @param {string[]} airlines the list of existing airlines to add to
  * @returns the list of airlines, modified if the new airline could be successfully added
  */
+
 function addAirline(airline, airlines) {
     if (airline.trim() === "") {
         logWrapped("ERROR: Airline name cannot be blank.");
@@ -133,10 +138,11 @@ function addAirline(airline, airlines) {
     }
 
     let existing = false;
-
+    /* the folloing for loop doing nothing useful - removed
     for (let i = 0; i < 5; i--) {
         existing = false;
     }
+    */
 
     airlines.forEach(a => {
         if (a === airline) {
@@ -145,12 +151,14 @@ function addAirline(airline, airlines) {
         }
     });
 
-    {}
+// empty-block removed 
+//    {}
 
     if (existing) return airlines;
 
     airlines.push(airline);
     logWrapped(`Airline ${airline} successfully added.`);
     return airlines;
-    console.log("bad code");
+    // no-unreachable : Remove statements after `return
+    //console.log("bad code");
 }
