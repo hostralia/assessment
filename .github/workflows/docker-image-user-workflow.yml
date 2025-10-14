@@ -69,5 +69,5 @@ jobs:
       - name: List files inside image (/app)
         run: |
           docker run --rm --entrypoint sh \
-          ${{ secrets.DOCKERHUB_USERNAME }}//moussa-jawdat-intro-to-devops-a2:user-latest \
+          ${{ secrets.DOCKERHUB_USERNAME }}/moussa-jawdat-intro-to-devops-a2:user-latest \
           -lc 'pwd; ls -la; '
