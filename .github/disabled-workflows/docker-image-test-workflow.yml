@@ -1,5 +1,4 @@
-name: docker-image-task4-moussa-jawdat-intro-to-devops-a2
-# CI/CD for Docker image
+name: Docker image test-facing build and push
 # Runs tests, then builds and pushes Docker image to Docker Hub if tests passeses
 # Uses GitHub Actions secrets for Docker Hub credentials    
 
